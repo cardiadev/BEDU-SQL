@@ -1,0 +1,8 @@
+CREATE TABLE books (
+  bookid INT NOT NULL AUTO_INCREMENT,
+  title VARCHAR(250) NOT NULL,
+  author VARCHAR(250) NOT NULL,
+  published DATE NOT NULL,
+  stock INT NOT NULL,
+  PRIMARY KEY (bookid)
+);
