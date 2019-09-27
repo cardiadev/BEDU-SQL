@@ -45,7 +45,12 @@ INSERT INTO members (firstname, lastname)
 VALUES ('Carlos', 'Diaz'),
        ('Sofia', 'Vergara'),
        ('Julio', 'Guevara'),
-       ('Arlet', 'Rodriguez'),
+       ('Scarlet', 'Gomez'),
+       ('Valeria', 'Bracamontes'),
+       ('Aimee', 'Gonzalez'),
+       ('Cesar', 'Piñeda'),
+       ('Daniel', 'Vazquez'),
+       ('Jose', 'Palacios'),
        ('Roberto', 'Bolaños');
 
 -- Insertando una nueva columna
@@ -85,6 +90,13 @@ CREATE TABLE borrowings (
 
 --
 INSERT INTO borrowings (bookid, memberid, borrowdate, returndate)
-VALUES (3, 2, '2019-09-23' '2019-10-04'),
-       (2, 1, '2019-04-16' '2019-08-01'),
-       (1, 3, '2019-05-23' '2019-06-23')
+VALUES (3, 1, '2019-09-23', '2020-01-01'),
+       (2, 3, '2019-02-23', '2020-08-05'),
+       (13, 6, '2019-08-28', '2020-08-09'),
+       (1, 9, '2019-05-10', '2020-01-30'),
+       (4, 10, '2019-02-12', '2020-04-30'),
+       (11, 2, '2019-09-15', '2020-07-25'),
+       (7, 1, '2019-05-11', '2020-10-22'),
+       (2, 4, '2019-02-10', '2020-12-21'),
+       (10, 8, '2019-01-22', '2020-08-22'),
+       (5, 10, '2019-01-23', '2019-03-23');
