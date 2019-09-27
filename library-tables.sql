@@ -10,26 +10,26 @@ CREATE TABLE books (
 
 -- Insertando datos en una tabla
 INSERT INTO books (title, author, published, stock)
-VALUES ('Don Quijote de la Mancha', 'Miguel de Cervantes', '2012-03-27',5),
-       ('Historia de dos ciudades', 'Charles Dickens', '',120),
-       ('El Señor de los Anillos', 'J. R. R. Tolkien', '',189),
-       ('El principito', 'Antoine de Saint-Exupéry', '',245),
-       ('El Hobbit', 'J. R. R. Tolkien', '',1),
-       ('Sueño en el pabellón rojo', 'Cao Xueqin', '',283),
-       ('Las aventuras de Alicia en el país de las maravillas', 'Lewis Carroll', '',130),
-       ('Triple representatividad', 'Jiang Zemin', '',12),
-       ('Y no quedó ninguno (Diez negritos)', 'Agatha Christie', '',0),
-       ('El león, la bruja y el armario', 'C. S. Lewis', '',0),
-       ('Ella', 'Henry Rider Haggard', '',0),
-       ('El código Da Vinci', 'Dan Brown', '',0),
-       ('El guardián entre el centeno', 'J. D. Salinger', '',0),
-       ('El alquimista', 'Paulo Coelho', '',0),
-       ('El camino a Cristo', 'Ellen G. White', '',0),
-       ('Heidi', 'Johanna Spyri', '',0),
-       ('El libro del sentido del común del cuidado de bebés y niños (Tu hijo)', 'Dr. Benjamin Spock', '',0),
-       ('Ana de las Tejas Verdes', 'Lucy Maud Montgomery', '',0),
-       ('Azabache (Bella Negra)', 'Anna Sewell', '',0),
-       ('El nombre de la rosa', 'Umberto Eco', '',0);
+VALUES ('Don Quijote de la Mancha', 'Miguel de Cervantes', '2012-03-02',5),
+       ('Historia de dos ciudades', 'Charles Dickens', '1989-02-16',120),
+       ('El Señor de los Anillos', 'J. R. R. Tolkien', '2009-02-25',189),
+       ('El principito', 'Antoine de Saint-Exupéry', '2003-07-09',245),
+       ('El Hobbit', 'J. R. R. Tolkien', '2004-08-22',1),
+       ('Sueño en el pabellón rojo', 'Cao Xueqin', '2010-06-28',283),
+       ('Las aventuras de Alicia en el país de las maravillas', 'Lewis Carroll', '2000-08-30',130),
+       ('Triple representatividad', 'Jiang Zemin', '2008-01-15',12),
+       ('Y no quedó ninguno (Diez negritos)', 'Agatha Christie', '2005-04-19',489),
+       ('El león, la bruja y el armario', 'C. S. Lewis', '2009-05-01',98),
+       ('Ella', 'Henry Rider Haggard', '2014-05-18',48),
+       ('El código Da Vinci', 'Dan Brown', '2011-10-16',188),
+       ('El guardián entre el centeno', 'J. D. Salinger', '2018-08-13',101),
+       ('El alquimista', 'Paulo Coelho', '2002-07-19',90),
+       ('El camino a Cristo', 'Ellen G. White', '2009-05-23',20),
+       ('Heidi', 'Johanna Spyri', '2001-03-27',38),
+       ('El libro del sentido del común del cuidado de bebés y niños (Tu hijo)', 'Dr. Benjamin Spock', '2017-08-25',290),
+       ('Ana de las Tejas Verdes', 'Lucy Maud Montgomery', '2012-10-22',498),
+       ('Azabache (Bella Negra)', 'Anna Sewell', '2015-12-29',304),
+       ('El nombre de la rosa', 'Umberto Eco', '1999-02-05',222);
 
 
 -- Creando tabla de usuarios
