@@ -100,3 +100,62 @@ VALUES (3, 1, '2019-09-23', '2020-01-01'),
        (2, 4, '2019-02-10', '2020-12-21'),
        (10, 8, '2019-01-22', '2020-08-22'),
        (5, 10, '2019-01-23', '2019-03-23');
+
+-- Usando INNER JOIN
+SELECT *
+FROM books
+INNER JOIN borrowings
+  ON books.bookid = borrowings.borrowingid;
+
+-- Usando INNER JOIN
+SELECT *
+FROM books
+INNER JOIN borrowings
+  ON books.bookid = borrowings.borrowingid
+INNER JOIN members
+  ON members.memberid = borrowings.memberid;
+
+-- Usando ALIAS en los queries
+SELECT *
+FROM books AS b
+INNER JOIN borrowings AS bor
+  ON b.bookid = bor.borrowingid;
+
+-- Usando ALIAS en los queries
+SELECT *
+FROM books AS b
+INNER JOIN borrowings AS bor
+  ON b.bookid = bor.borrowingid
+INNER JOIN members AS m
+  ON m.memberid = bor.memberid;
+
+-- Query para saber cual libro se ha rentado mas veces
+SELECT b.title, COUNT(b.title) AS total_veces_rentado
+FROM books AS b
+INNER JOIN borrowings AS bor
+  ON b.bookid = bor.bookid
+  GROUP BY b.title
+  ORDER BY total_veces_rentado DESC;
+
+-- Cuales libros han rentado las personas.
+SELECT CONCAT (m.firstname, ' ', m.lastname) AS fullname, b.title
+FROM borrowings AS bor
+INNER JOIN members AS m ON m.memberid = bor.memberid
+INNER JOIN books AS b ON b.bookid = bor.bookid
+GROUP BY fullname, b.title
+ORDER BY fullname;
+
+-- Al día de hoy que libros hay rentados y quien los tiene
+SELECT CONCAT (m.firstname, ' ', m.lastname) AS fullname, b.title, bor.borrowdate, bor.returndate
+FROM borrowings AS bor
+INNER JOIN members AS m ON m.memberid = bor.memberid
+INNER JOIN books AS b ON b.bookid = bor.bookid
+WHERE CURDATE() BETWEEN bor.borrowdate AND bor.returndate
+GROUP BY fullname, b.title, bor.borrowdate, bor.returndate
+ORDER BY fullname;
+
+-- Reporte de cuantos libros se rentan por mes
+SELECT CONCAT(MONTHNAME(borrowdate), '-', YEAR(borrowdate)) AS monunt_name,
+      COUNT(*) rented_books
+FROM borrowings
+GROUP BY monunt_name;
